@@ -243,7 +243,8 @@ p {
     background-color: grey;
     margin: auto 0;
     border-radius: 1%;
-    transition-property: border-radius,width,height;
+    opacity: 30%;
+    transition-property: border-radius,width,height,opacity;
     transition-duration: .4s;
     transition-timing-function: ease-in-out;
     border: 5px solid black;
@@ -253,6 +254,6 @@ p {
     border-radius: 7%;
     width: 30%;
     height: auto;
-
-
+    margin: 10px;
+    opacity: 100%;
 }
