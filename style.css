@@ -1,0 +1,258 @@
+/* style.css */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    color: #333;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f5f5dc; /* Light beige background for warmth */
+    transition: background-color 0.5s ease; /* Smooth transition for background color */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Stack navigation items vertically */
+    }
+
+    nav li {
+        margin: 10px 0; /* Adjust margin for vertical layout */
+    }
+
+    .home-content img {
+        width: 100%; /* Make images responsive */
+    }
+
+    table {
+        width: 100%; /* Make table full width on smaller screens */
+    }
+}
+
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Stack navigation items vertically */
+    }
+
+    nav li {
+        margin: 10px 0; /* Adjust margin for vertical layout */
+    }
+
+    .home-content img {
+        width: 100%; /* Make images responsive */
+    }
+
+    table {
+        width: 100%; /* Make table full width on smaller screens */
+    }
+}
+
+
+#background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url("website_background.jpg"); /* Replace with your image path */
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: gradientAnimation 15s ease infinite; /* Slow-moving gradient */
+}
+
+header {
+    background-color: #c49a00; /* Slightly darker golden color */
+    transition: background-color 0.5s ease; /* Smooth transition for header color */
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    text-align: center;
+    display: flex; /* Use flexbox for horizontal arrangement */
+    justify-content: center; /* Center the buttons horizontally */
+}
+
+nav li {
+    display: inline;
+    margin: 0 20px;
+    transition: transform 0.2s ease-in-out;
+}
+
+nav li:hover {
+    transform: scale(1.1);
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff; /* White text for navigation links */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effect */
+    padding: 8px 16px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+main {
+    /* padding: 20px; */
+    flex: 1;
+    color: whitesmoke;
+}
+
+section {
+    /* padding: 30px; */
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1px); /* Add blur effect to the table background */
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for readability */
+    color:black;
+}
+
+
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: left;
+    opacity: 100%;
+    
+}
+
+th {
+    background-color: #d1b000;
+    color: white;
+}
+
+footer {
+    background-color: #444; /* Darker footer for contrast */
+    transition: background-color 0.5s ease; /* Smooth transition for footer color */
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    margin-top: 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+#logo {
+    max-height: 80px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+#location {
+    text-align: center;
+}
+
+#openMapButton {
+    background-color: #c49a00; /* Match the header color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effect */
+}
+
+#openMapButton:hover {
+    background-color: #b58e00; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Improved text styles */
+h2 {
+    font-weight: 700; /* Slightly bolder heading */
+    line-height: 1.2; /* Adjust line height for better readability */
+    margin-bottom: 10px; /* Add some space below the heading */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle text shadow */
+    transition: transform 0.3s ease; /* Smooth transition for heading */
+    text-align: center;
+}
+
+h2:hover {
+    transform: scale(1.01); /* Slightly enlarge on hover */
+}
+
+/* Add animation for background */
+@keyframes gradientAnimation {
+    0% { background-color: #f5f5dc; }
+    50% { background-color: #e0e0e0; }
+    100% { background-color: #f5f5dc; }
+}
+
+/* Add fade-in effect for sections */
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.5s forwards; /* Fade-in effect */
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+p {
+    font-weight: 400; /* Normal font weight for paragraphs */
+    line-height: 1.6; /* Adjust line height for better readability */
+    margin-bottom: 15px; /* Add some space below paragraphs */
+    /* border-bottom: 1px solid black; */
+}
+.photos{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    
+}
+.photos img{
+    width: 25%;
+    height: auto;
+    padding: 4px;
+    background-color: grey;
+    margin: auto 0;
+    border-radius: 1%;
+    transition-property: border-radius,width,height;
+    transition-duration: .4s;
+    transition-timing-function: ease-in-out;
+    border: 5px solid black;
+
+}
+.photos img:hover{
+    border-radius: 7%;
+    width: 30%;
+    height: auto;
+
+
+}
